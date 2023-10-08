@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyme7ik30n5d2"]
+
+[ext_resource type="Script" path="res://rooms/main.gd" id="1_bpry2"]
+[ext_resource type="PackedScene" uid="uid://bc7mhnsmnnulk" path="res://BG.tscn" id="2_t1qsx"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_bpry2")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 400.0
+offset_top = 176.0
+offset_right = 746.0
+offset_bottom = 288.0
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 400.0
+offset_top = 368.0
+offset_right = 746.0
+offset_bottom = 480.0
+text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_t1qsx")]
+offset = Vector2(0, 64)
+transform = Transform2D(1, 0, 0, 1, 0, 64)
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

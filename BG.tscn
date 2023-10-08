@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc7mhnsmnnulk"]
+
+[ext_resource type="Script" path="res://BG.gd" id="1_kchq8"]
+[ext_resource type="Texture2D" uid="uid://c322hyl2xc4kw" path="res://resources/environment/Background/back.png" id="2_y6axl"]
+[ext_resource type="Texture2D" uid="uid://baohi4ygoeygd" path="res://resources/environment/Background/middle.png" id="3_g8mq1"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_kchq8")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.5)
+motion_offset = Vector2(0, -160)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_y6axl")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_offset = Vector2(0, -128)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(88, 544)
+texture = ExtResource("3_g8mq1")
+metadata/_edit_lock_ = true
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(264, 544)
+texture = ExtResource("3_g8mq1")
+metadata/_edit_lock_ = true
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(440, 544)
+texture = ExtResource("3_g8mq1")
+metadata/_edit_lock_ = true
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(792, 544)
+texture = ExtResource("3_g8mq1")
+metadata/_edit_lock_ = true
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(968, 544)
+texture = ExtResource("3_g8mq1")
+metadata/_edit_lock_ = true
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1144, 544)
+texture = ExtResource("3_g8mq1")
+metadata/_edit_lock_ = true
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(616, 544)
+texture = ExtResource("3_g8mq1")
+metadata/_edit_lock_ = true
